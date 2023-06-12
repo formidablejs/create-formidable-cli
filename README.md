@@ -21,7 +21,7 @@ Usage
 Create a new project using the following command:
 
 ```bash
-create-formidable-cli <project-name>
+create-formidable-cli new <project-name>
 ```
 
 > This will create a new project in the current directory with the name you specified.
@@ -48,7 +48,7 @@ npm run build
 To add a new command, you can use the following command:
 
 ```bash
-create-formidable-cli add Hello --signature="hello {?name}"
+cfc add Hello --signature="hello {?name}"
 ```
 
 This will create a new command in the `src/Commands` directory with the following boilerplate:
