@@ -50,6 +50,12 @@ export const scaffold = async (cmd: any, output: string, name: string) => {
 
               packageJson.name = name
 
+              packageJson.bin = {
+                [name]: './bin/run'
+              }
+
+              delete packageJson.bin['create-formidable-cli']
+
               fs.writeFileSync(entryPath, JSON.stringify(packageJson, null, 4))
             }
 
