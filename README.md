@@ -90,9 +90,9 @@ All user supplied arguments and options are wrapped in curly braces. In the foll
 
 ```ts
 get props(): PropList {
-	return {
-		name: string().default('Donald')
-	}
+  return {
+    name: string().default('Donald')
+  }
 }
 ```
 
@@ -102,7 +102,7 @@ Options, like arguments, are another form of user input. Options are prefixed by
 
 ```ts
 get signature(): string {
-    return 'hello {name} {--time}'
+  return 'hello {name} {--time}'
 }
 ```
 
@@ -118,14 +118,14 @@ Next, let's take a look at an option that expects a value. If the user must spec
 
 ```ts
 get signature(): string {
-    return 'hello {name} {--time}'
+  return 'hello {name} {--time}'
 }
 
 get props(): PropList {
-	return {
-		name: string().default('Donald'),
-		time: string()
-	}
+  return {
+    name: string().default('Donald'),
+    time: string()
+  }
 }
 ```
 
@@ -141,9 +141,9 @@ To assign an alias when defining an option, you may specify it in the `props` pr
 
 ```ts
 get props(): PropList {
-	return {
-		time: string().alias('t')
-	}
+  return {
+    time: string().alias('t')
+  }
 }
 ```
 
@@ -159,9 +159,9 @@ You may assign descriptions to input arguments and options in the `props` proper
 
 ```ts
 get props(): PropList {
-	return {
-		time: string('Current time')
-	}
+  return {
+    time: string('Current time')
+  }
 }
 ```
 
@@ -173,7 +173,7 @@ While your command is executing, you will likely need to access the values for t
 
 ```ts
 async handle(): Promise<void> {
-    const name: string = this.argument('name')
+  const name: string = this.argument('name')
 }
 ```
 
@@ -181,7 +181,7 @@ Options may be retrieved just as easily as arguments using the `option` method:
 
 ```ts
 handle(): void {
-    const time: string = this.option('time')
+  const time: string = this.option('time')
 }
 ```
 
@@ -189,8 +189,8 @@ You may also pass a default value as the second parameter if the value is `null`
 
 ```ts
 handle(): void {
-    const name: string = this.argument('name', 'Donald')
-    const time: string = this.option('time', '19:05')
+  const name: string = this.argument('name', 'Donald')
+  const time: string = this.option('time', '19:05')
 }
 ```
 
@@ -200,9 +200,9 @@ To send output to the console, you may use the `message`, `info`, `succces,` `wr
 
 ```ts
 handle(): void {
-    // ...
+  // ...
 
-    this.success('The command was successful')
+  this.success('The command was successful')
 }
 ```
 
