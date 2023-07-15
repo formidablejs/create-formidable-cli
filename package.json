@@ -27,7 +27,7 @@
     "unzipper": "^0.10.14"
   },
   "devDependencies": {
-    "@oclif/test": "^2.3.22",
+    "@oclif/test": "^2.3.28",
     "@types/chai": "^4",
     "@types/mocha": "^9.0.0",
     "@types/node": "^16.18.35",
