@@ -19,7 +19,7 @@
     "/oclif.manifest.json"
   ],
   "dependencies": {
-    "@formidablejs/installer": "^0.9.2",
+    "@formidablejs/installer": "^0.9.5",
     "@inquirer/prompts": "^2.1.1",
     "@oclif/core": "^2",
     "@oclif/plugin-help": "^5",
